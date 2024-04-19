@@ -1,9 +1,12 @@
-import { sam } from "utils/sample";
+import { add, minus } from "utils/sample";
 
 it("add corretly", () => {
-  expect(sam({ a: 3, b: 5 })).toBe(8);
+  expect(add({ a: 3, b: 5 })).toBe(8);
 });
 
+test("test minus calculator", () => {
+  expect(minus({ a: 3, b: 5 })).toBe(-2);
+});
 // it("ENV Test", async () => {
 //   const testApi = process.env.REACT_APP_TEST_API;
 //   if (testApi) {
