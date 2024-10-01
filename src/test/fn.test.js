@@ -34,3 +34,28 @@ test('이름과 나이를 전달받아 객체 반환해줘', () => {
         age: 23,
     });
 });
+
+// toBeNull
+// toBeUndefined
+// toBeDefined
+
+test('null은 null이다.', () => {
+    expect(null).toBeNull();
+});
+
+// toBeTruthy
+// toBeFalsy
+
+test('0은 false이다.', () => {
+    expect(add(1, -1)).toBeFalsy();
+});
+
+
+// 해당 (아래) 코드는 통과하지 못함
+// test('0은 false이다.', () => {
+//     expect(add('hello', 'world')).toBeFalsy();
+// });
+
+test('비어있지 않은 문자열은 true이다.', () => {
+    expect(add('hello', 'world')).toBeTruthy();
+});
