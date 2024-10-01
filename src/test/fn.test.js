@@ -87,3 +87,16 @@ test('0.1 더하기 0.2는 0.3이다.', () => {
     expect(add(0.1, 0.2)).toBeCloseTo(0.3);
     // 위처럼 toBeCloseTo 사용
 });
+
+// test('Hello World에 a라는 글자가 있나?', () => {
+//     expect('Hello World').toMatch(/a/); // 정규표현식
+// });
+
+test('Hello World에 a라는 글자가 있나?', () => {
+    expect('Hello World').toMatch(/H/); // 정규표현식
+});
+
+test('Hello World에 a라는 글자가 있나?', () => {
+    expect('Hello World').toMatch(/H/i); // 정규표현식
+    // 대소문자 구분 없애려면 뒤에 i를 붙여주면 된다.
+});
