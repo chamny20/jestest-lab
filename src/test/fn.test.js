@@ -1,4 +1,5 @@
 import { add, makeUser } from "utils/fn";
+import { throwErr } from "../utils/fn";
 
 test("1은 1이야.", () => {
     expect(1).toBe(1);
@@ -107,4 +108,9 @@ test("유저 리스트에 Cherry가 있나?", () => {
     const user = "Cherry";
     const userList = ["Tom", "Cherry", "Kai"];
     expect(userList).toContain(user);
+})
+
+// Error - 어떤 작업을 했을 때 특정 에러가 발생되는지 테스트 가능
+test("이거 에러 나나요?", () => {
+    expect(() => throwErr()).toThrow('xx');
 })
