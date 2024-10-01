@@ -100,3 +100,11 @@ test('Hello World에 a라는 글자가 있나?', () => {
     expect('Hello World').toMatch(/H/i); // 정규표현식
     // 대소문자 구분 없애려면 뒤에 i를 붙여주면 된다.
 });
+
+// toContain
+
+test("유저 리스트에 Cherry가 있나?", () => {
+    const user = "Cherry";
+    const userList = ["Tom", "Cherry", "Kai"];
+    expect(userList).toContain(user);
+})
